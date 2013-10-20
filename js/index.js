@@ -1,33 +1,92 @@
-// JS by Mr Ben Howdle
-var interval = 5000;
+(function() {
 
-var slides = document.querySelectorAll('.Slider-slide');
+  function Tractile(elements, options) {
 
-var total = slides.length;
+    // doing this allows the developer to omit the `new` keyword from their calls to Tractile
+    if (!(this instanceof Tractile)) {
+      return new Tractile(elements, options);
+    }
 
-var curr = 0;
+    if (!elements) {
+      throw new Error('No DOM elements passed into Tractile');
+    }
 
-function clear(klass){
-  var len = slides.length;
-  while(len--){
-    slides[len].classList.remove(klass);
+    if (elements.length < 2) {
+      return;
+    }
+
+    var userOptions = options || {};
+
+    var defaults = {
+      interval: 2000
+    };
+
+    this.options = {};
+
+    for (var x in defaults) {
+      this.options[x] = userOptions[x] || defaults[x];
+    }
+
+    this.current = 0;
+
+    this.elements = elements;
+
+    this.total = this.elements.length;
+
+    this.klasses = {
+      active: 'is-active',
+      previous: 'is-previous'
+    };
+
+    setInterval(this.run.bind(this), this.options.interval);
+
   }
-}
 
-setInterval(function(){
-  if((curr - 1) >= 0){
-    slides[curr - 1].classList.remove('is-previous');
-  }
-  if((curr + 1) < total){
-    clear('is-previous');
-    slides[curr].classList.remove('is-active');
-    slides[curr].classList.add('is-previous');
-    slides[curr + 1].classList.add('is-active');
-    curr++;
-  } else {
-    curr = 0;
-    clear('is-active');
-    slides[total - 1].classList.add('is-previous');
-    slides[curr].classList.add('is-active');
-  }
-}, interval);
+  Tractile.prototype.run = function() {
+
+    var clear = function(klass) {
+      if (!klass) {
+        return;
+      }
+      var len = this.total;
+      while (len--) {
+        this.elements[len].classList.remove(klass);
+      }
+    }.bind(this);
+
+    if ((this.current - 1) >= 0) {
+      this.elements[this.current - 1].classList.remove(this.klasses.previous);
+    }
+    if ((this.current + 1) < this.total) {
+      clear(this.klasses.previous);
+      this.elements[this.current].classList.remove(this.klasses.active);
+      this.elements[this.current].classList.add(this.klasses.previous);
+      this.elements[this.current + 1].classList.add(this.klasses.active);
+      this.current++;
+    } else {
+      this.current = 0;
+      clear(this.klasses.active);
+      this.elements[this.total - 1].classList.add(this.klasses.previous);
+      this.elements[this.current].classList.add(this.klasses.active);
+    }
+
+  };
+
+  // expose Tractile
+  window.Tractile = Tractile;
+
+})();
+
+/* 
+  Examples
+  */
+
+Tractile($('.Slider-slide'), {
+  interval: 5000
+});
+
+// Tractile(document.querySelectorAll('.Slider-slide'), {
+//   interval: 5000
+// });
+
+// Tractile(document.querySelectorAll('.Slider-slide'));
