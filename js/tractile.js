@@ -76,17 +76,3 @@
   window.Tractile = Tractile;
 
 })();
-
-/* 
-  Examples
-  */
-
-Tractile($('.Slider-slide'), {
-  interval: 5000
-});
-
-// Tractile(document.querySelectorAll('.Slider-slide'), {
-//   interval: 5000
-// });
-
-// Tractile(document.querySelectorAll('.Slider-slide'));

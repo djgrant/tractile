@@ -7,70 +7,7 @@
 
   <title>CodePen - A Pen by djgrant</title>
 
-    <style>
-* {
-  box-sizing: border-box;
-}
-
-html, body {
-  height: 100%;
-}
-
-html {
-  width: 100%;
-  display: table;
-}
-
-body {
-  display: table-cell;
-  vertical-align: middle;
-  background: #222222;
-}
-
-h1 {
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-  font-weight: 300;
-  font-size: 75px;
-  letter-spacing: -2px;
-  text-align: center;
-  color: #0f0f0f;
-  text-shadow: 0 -1px 0 black, 0 1px 0 rgba(255, 255, 255, 0.055);
-  margin-top: -100px;
-  letter-spacing: -2px;
-}
-
-.Slider {
-  position: relative;
-  width: 500px;
-  height: 316px;
-  margin: 0 auto;
-  overflow: hidden;
-  border: 5px solid white;
-  perspective: 1000;
-}
-
-.Slider-slide {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  transition: transform 1s ease;
-  transform: translateX(100%);
-}
-.Slider-slide.is-active {
-  z-index: 2;
-}
-.Slider-slide.is-previous {
-  z-index: 1;
-}
-.Slider-slide.is-active {
-  transform: translateX(0);
-}
-.Slider-slide.is-previous {
-  transform: translateX(-100%);
-}
-
-</style>
-
+  <link rel="stylesheet" href="css/styles.css">
   <script src="js/prefixfree.min.js"></script>
 
 </head>
@@ -78,23 +15,23 @@ h1 {
 <body>
 
   <h1>Tractile</h1>
-<div class="Slider">
-  <div class="Slider-slide is-active">
-    <img src="http://farm4.staticflickr.com/3793/10034749186_60a5abbfc1.jpg"/>
+
+  <div class="Tractile">
+    <div class="Tractile-slide is-active">
+      <img src="http://farm4.staticflickr.com/3793/10034749186_60a5abbfc1.jpg"/>
+    </div>
+    <div class="Tractile-slide">
+      <img src="http://farm8.staticflickr.com/7368/10035014683_f054e79bd1.jpg"/>
+    </div>
+    <div class="Tractile-slide">
+      <img src="http://farm8.staticflickr.com/7450/10040901255_579c7d4ca6.jpg"/>
+    </div>
   </div>
-  <div class="Slider-slide">
-    <img src="http://farm8.staticflickr.com/7368/10035014683_f054e79bd1.jpg"/>
-  </div>
-  <div class="Slider-slide">
-    <img src="http://farm8.staticflickr.com/7450/10040901255_579c7d4ca6.jpg"/>
-  </div>
-</div>
 
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-  <script src='http://codepen.io/assets/libs/fullpage/none.js'></script>
-
-  <script src="js/index.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="js/tractile.js"></script>
+  <script src="js/examples.js"></script>
 
 </body>
 
