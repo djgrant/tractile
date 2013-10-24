@@ -8,8 +8,6 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  transition: transform 1s ease;
-  transform: translateX(100%);
 }
 .Tractile-slide.is-active {
   z-index: 2;
@@ -17,11 +15,41 @@
 .Tractile-slide.is-previous {
   z-index: 1;
 }
-.Tractile-slide.is-active {
+.fade .Tractile-slide {
+  transition: opacity 1s ease;
+}
+.slideLeft .Tractile-slide, .slideUp .Tractile-slide {
+  transition: transform 1s ease;
+}
+
+.slideLeft .Tractile-slide {
+  transform: translateX(100%);
+}
+.slideLeft .Tractile-slide.is-active {
   transform: translateX(0);
 }
-.Tractile-slide.is-previous {
+.slideLeft .Tractile-slide.is-previous {
   transform: translateX(-100%);
+}
+
+.slideUp .Tractile-slide {
+  transform: translateY(100%);
+}
+.slideUp .Tractile-slide.is-active {
+  transform: translateY(0);
+}
+.slideUp .Tractile-slide.is-previous {
+  transform: translateY(-100%);
+}
+
+.fade .Tractile-slide {
+  opacity: 0;
+}
+.fade .Tractile-slide.is-active {
+  opacity: 1;
+}
+.fade .Tractile-slide.is-previous {
+  opacity: 0;
 }
 
 .Tractile {
