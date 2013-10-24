@@ -21,7 +21,6 @@ $_animationClass: ""
     .slideUp &
       transition: transform $Tractile-duration $Tractile-transition
 
-    &,
     .fade &
       transition: opacity $Tractile-duration $Tractile-transition
 
@@ -68,7 +67,7 @@ $_animationClass: ""
 
 
 @if $Tractile-type == all
-  $_animationClass: ".Tractile-slide, .fade"
+  $_animationClass: ".fade"
 
 @if $Tractile-type == fade or $Tractile-type == all
   #{$_animationClass} .Tractile-slide

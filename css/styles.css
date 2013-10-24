@@ -18,7 +18,7 @@
 .slideLeft .Tractile-slide, .slideUp .Tractile-slide {
   transition: transform 1s ease;
 }
-.Tractile-slide, .fade .Tractile-slide {
+.fade .Tractile-slide {
   transition: opacity 1s ease;
 }
 
@@ -42,13 +42,13 @@
   transform: translateY(-100%);
 }
 
-.Tractile-slide, .fade .Tractile-slide {
+.fade .Tractile-slide {
   opacity: 0;
 }
-.Tractile-slide.is-active, .fade .Tractile-slide.is-active {
+.fade .Tractile-slide.is-active {
   opacity: 1;
 }
-.Tractile-slide.is-previous, .fade .Tractile-slide.is-previous {
+.fade .Tractile-slide.is-previous {
   opacity: 0;
 }
 
