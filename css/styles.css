@@ -23,20 +23,20 @@
 }
 
 .slideLeft .Tractile-slide {
-  transform: translateX(100%);
+  transform: translateX(100%) translateZ(0);
 }
 .slideLeft .Tractile-slide.is-active {
-  transform: translateX(0);
+  transform: translateX(0) translateZ(0);
 }
 .slideLeft .Tractile-slide.is-previous {
   transform: translateX(-100%);
 }
 
 .slideUp .Tractile-slide {
-  transform: translateY(100%);
+  transform: translateY(100%) translateZ(0);
 }
 .slideUp .Tractile-slide.is-active {
-  transform: translateY(0);
+  transform: translateY(0) translateZ(0);
 }
 .slideUp .Tractile-slide.is-previous {
   transform: translateY(-100%);
