@@ -17,12 +17,13 @@ $_animationClass: ""
     z-index: 1
 
   @if $Tractile-type == all
-    .fade &
-      transition: opacity $Tractile-duration $Tractile-transition
-
     .slideLeft &,
     .slideUp &
       transition: transform $Tractile-duration $Tractile-transition
+
+    &,
+    .fade &
+      transition: opacity $Tractile-duration $Tractile-transition
 
   @else
     &
@@ -67,7 +68,7 @@ $_animationClass: ""
 
 
 @if $Tractile-type == all
-  $_animationClass: ".fade"
+  $_animationClass: ".Tractile-slide, .fade"
 
 @if $Tractile-type == fade or $Tractile-type == all
   #{$_animationClass} .Tractile-slide

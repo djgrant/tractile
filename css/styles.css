@@ -15,11 +15,11 @@
 .Tractile-slide.is-previous {
   z-index: 1;
 }
-.fade .Tractile-slide {
-  transition: opacity 1s ease;
-}
 .slideLeft .Tractile-slide, .slideUp .Tractile-slide {
   transition: transform 1s ease;
+}
+.Tractile-slide, .fade .Tractile-slide {
+  transition: opacity 1s ease;
 }
 
 .slideLeft .Tractile-slide {
@@ -42,13 +42,13 @@
   transform: translateY(-100%);
 }
 
-.fade .Tractile-slide {
+.Tractile-slide, .fade .Tractile-slide {
   opacity: 0;
 }
-.fade .Tractile-slide.is-active {
+.Tractile-slide.is-active, .fade .Tractile-slide.is-active {
   opacity: 1;
 }
-.fade .Tractile-slide.is-previous {
+.Tractile-slide.is-previous, .fade .Tractile-slide.is-previous {
   opacity: 0;
 }
 
