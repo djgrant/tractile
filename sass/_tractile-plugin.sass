@@ -52,6 +52,24 @@ $_animationClass: ""
 
 
 @if $Tractile-type == all
+  $_animationClass: ".slideRight"
+
+@if $Tractile-type == slideRight or $Tractile-type == all
+  #{$_animationClass} .Tractile-slide
+
+    // Queing
+    transform: translateX(-100%) translateZ(0)
+
+    // Animating in
+    &.is-active
+      transform: translateX(0) translateZ(0)
+
+    // Animating out
+    &.is-previous
+      transform: translateX(100%)
+
+
+@if $Tractile-type == all
   $_animationClass: ".slideUp"
 
 @if $Tractile-type == slideUp or $Tractile-type == all
@@ -64,6 +82,21 @@ $_animationClass: ""
 
     &.is-previous
       transform: translateY(-100%)
+
+
+@if $Tractile-type == all
+  $_animationClass: ".slideDown"
+
+@if $Tractile-type == slideUp or $Tractile-type == all
+  #{$_animationClass} .Tractile-slide
+
+    transform: translateY(-100%) translateZ(0)
+
+    &.is-active
+      transform: translateY(0) translateZ(0)
+
+    &.is-previous
+      transform: translateY(100%)
 
 
 @if $Tractile-type == all
