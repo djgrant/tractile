@@ -27,6 +27,6 @@ Or pass it multiple elements with `document.querySelectorAll` which will instant
     });
   
 
-Or, we can just pass on element in, and use the default slide interval as 2 seconds...
+Or, we can just pass the element in, and use the default slide interval of 2 seconds...
 
     Tractile(document.querySelector('.Tractile'));
