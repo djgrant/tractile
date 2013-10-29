@@ -8,17 +8,17 @@ You need to pass the parent element into Tractile and it will each child as a sl
 
 So we can use jQuery:
 
-  Tractile($('.Tractile'), {
-    interval: 5000
-  });
+    Tractile($('.Tractile'), {
+      interval: 5000
+    });
   
 Or pass it multiple elements with `document.querySelectorAll` which will instantiate multiple Tractile sliders.
   
-  Tractile(document.querySelectorAll('.Tractile'), {
-    interval: 5000
-  });
+    Tractile(document.querySelectorAll('.Tractile'), {
+      interval: 5000
+    });
   
 
 Or, we can just pass on element in, and use the default slide interval as 2 seconds...
 
-  Tractile(document.querySelector('.Tractile'));
+    Tractile(document.querySelector('.Tractile'));
