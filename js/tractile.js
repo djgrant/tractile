@@ -1,17 +1,25 @@
 (function() {
 
-  function Tractile(elements, options) {
+  function Tractile(node, options) {
 
     // doing this allows the developer to omit the `new` keyword from their calls to Tractile
     if (!(this instanceof Tractile)) {
-      return new Tractile(elements, options);
+      if (node.length) {
+        Array.prototype.forEach.call(node, function(n) {
+          return new Tractile(n, options);
+        });
+      } else {
+        return new Tractile(node, options);
+      }
     }
 
-    if (!elements) {
-      throw new Error('No DOM elements passed into Tractile');
+    if (this === window) {
+      return;
     }
 
-    if (elements.length < 2) {
+    node = (node instanceof jQuery) ? node[0] : node;
+
+    if (!node.children || node.children.length < 2) {
       return;
     }
 
@@ -29,7 +37,7 @@
 
     this.current = 0;
 
-    this.elements = elements;
+    this.elements = node.children;
 
     this.total = this.elements.length;
 
