@@ -4,7 +4,15 @@ Tractile is built, first and foremost, as a Sass plugin. However as much awesome
 
 Tractile works with or without jQuery, to make it as easy as possible for you to integrate.
 
-You need to pass the parent element into Tractile and it will each child as a slide. Simple.
+You need to pass the parent element into Tractile and it will use each child as a slide. Simple. 
+
+ie. the following HTML illustrates what you need to do
+
+    <ul class="Tractile"> <!-- Pass this in! -->
+        <li>Hi</li>
+        <li>there</li>
+        <li>Sassy</li>
+    </ul>
 
 So we can use jQuery:
 
