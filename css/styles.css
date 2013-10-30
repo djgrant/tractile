@@ -91,10 +91,6 @@
 }
 
 .splash .Tractile-slide {
-  background: #222222;
-}
-
-.splash .Tractile-slide {
   background: white;
 }
 .splash .Tractile-slide h2 {
@@ -129,7 +125,7 @@ body {
   top: 0;
   width: 100%;
   height: 100vh;
-  background: #222222;
+  background: white;
 }
 
 .non-splash {
@@ -140,26 +136,41 @@ body {
 }
 
 .wrapper {
-  width: 500px;
+  max-width: 1200px;
   margin: 0 auto;
+  padding: 0 20px;
 }
 
-.logo {
+.non-splash .wrapper {
+  max-width: 500px;
+  padding: 0;
+}
+
+.header {
   position: absolute;
   top: 0;
   width: 100%;
-  height: 110px;
-  line-height: 110px;
+  height: 90px;
+  line-height: 90px;
   z-index: 1;
-  margin-left: -3px;
   border: 1px solid #eeeeee;
-  font-size: 64px;
+}
+
+.logo {
+  float: left;
+  padding-right: 50px;
+  font-size: 56px;
+}
+
+.download {
+  float: right;
 }
 
 .strapline {
-  height: 110px;
+  height: 90px;
   margin: 0 auto;
   top: 50%;
+  margin-top: -75px;
 }
 .strapline h2 {
   color: #cccccc;
@@ -194,9 +205,7 @@ body {
 h1 {
   font-family: "corner-store", sans-serif;
   letter-spacing: -2px;
-  text-align: center;
   color: #444444;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.1);
   margin-bottom: 0;
   letter-spacing: -2px;
 }
@@ -218,4 +227,21 @@ h2, h3 {
   font-weight: 300;
   text-align: center;
   -webkit-font-smoothing: antialiased;
+}
+
+a.Button {
+  line-height: 40px;
+  text-decoration: none;
+  color: #333333;
+  font-size: 14px;
+  font-weight: 600;
+  -webkit-font-smoothing: antialiased;
+}
+
+.Button {
+  display: inline-block;
+  height: 40px;
+  padding: 0 15px;
+  border: 1px solid #dddddd;
+  border-radius: 4px;
 }
