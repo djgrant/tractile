@@ -6,69 +6,147 @@
   <title>Tractile - A Sass powered responsive slider</title>
 
   <link rel="stylesheet" href="css/styles.css">
-  <script src="js/prefixfree.min.js"></script>
+  <link rel="stylesheet" href="css/prism.css">
 
+  <script src="js/prefixfree.min.js"></script>
   <script type="text/javascript" src="//use.typekit.net/loa1ppl.js"></script>
   <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
 </head>
 <body>
 
-  <h1>Tractile</h1>
-  <h3>A Sass powered responsive slider<h3>
 
-  <div class="Tractile slideLeft">
-    <div class="Tractile-slide">
-      <img src="http://farm4.staticflickr.com/3793/10034749186_60a5abbfc1.jpg"/>
+  <div class="splash">
+
+    <div class="logo">
+      <h1>Tractile</h1>
     </div>
-    <div class="Tractile-slide">
-      <img src="http://farm8.staticflickr.com/7368/10035014683_f054e79bd1.jpg"/>
+
+    <div class="Tractile Tractile--fullscreen slideLeft">
+      <div class="Tractile-slide is-active">
+        <div class="strapline">
+          <h2>Sass powered CSS3 slider</h2>
+        </div>
+      </div>
+      <div class="Tractile-slide">
+        <div class="strapline">
+          <h2>Minimal JavaScript, lightweight CSS</h2>
+        </div>
+      </div>
+      <div class="Tractile-slide">
+        <div class="strapline">
+          <h2>Style agnostic</h2>
+        </div>
+      </div>
     </div>
-    <div class="Tractile-slide">
-      <img src="http://farm8.staticflickr.com/7450/10040901255_579c7d4ca6.jpg"/>
-    </div>
-    <div class="Tractile-slide">
-      <img src="http://farm8.staticflickr.com/7336/9729547993_a92dae4e1e.jpg"/>
-    </div>
-    <div class="Tractile-slide">
-      <img src="http://farm4.staticflickr.com/3498/3248713804_879f0b83b3.jpg"/>
-    </div>
+
+    <div class="calldown">Tell me more! <br>↓</div>
+
   </div>
 
-  <div class="Tractile fade">
-    <div class="Tractile-slide">
-      <img src="http://farm9.staticflickr.com/8389/8680930869_439a88c939.jpg"/>
-    </div>
-    <div class="Tractile-slide">
-      <img src="http://farm9.staticflickr.com/8230/8599222990_c0663a6762.jpg"/>
-    </div>
-    <div class="Tractile-slide">
-      <img src="http://farm9.staticflickr.com/8238/8594949556_9a07d910f5.jpg"/>
-    </div>
-    <div class="Tractile-slide">
-      <img src="http://farm2.staticflickr.com/1174/1410122891_e9532767f2.jpg"/>
-    </div>
-  </div>
+  <div class="non-splash">
+    <div class="wrapper">
 
-  <div class="Tractile slideUp">
-    <div class="Tractile-slide">
-      <img src="http://farm1.staticflickr.com/41/114424725_42d946fc01.jpg"/>
-    </div>
-    <div class="Tractile-slide">
-      <img src="http://farm5.staticflickr.com/4020/4382290032_f48da38b3d.jpg"/>
-    </div>
-    <div class="Tractile-slide">
-      <img src="http://farm3.staticflickr.com/2310/2168398358_2855cb718f.jpg"/>
-    </div>
-    <div class="Tractile-slide">
-      <img src="http://farm1.staticflickr.com/78/157688031_62d6db31f9.jpg"/>
+      <div class="example">
+
+        <h3>Simple setup</h3>
+
+        <div class="Tractile fade">
+          <div class="Tractile-slide is-active">
+            <img src="http://farm4.staticflickr.com/3793/10034749186_60a5abbfc1.jpg"/>
+          </div>
+          <div class="Tractile-slide">
+            <img src="http://farm8.staticflickr.com/7368/10035014683_f054e79bd1.jpg"/>
+          </div>
+          <div class="Tractile-slide">
+            <img src="http://farm8.staticflickr.com/7450/10040901255_579c7d4ca6.jpg"/>
+          </div>
+          <div class="Tractile-slide">
+            <img src="http://farm8.staticflickr.com/7336/9729547993_a92dae4e1e.jpg"/>
+          </div>
+          <div class="Tractile-slide">
+            <img src="http://farm4.staticflickr.com/3498/3248713804_879f0b83b3.jpg"/>
+          </div>
+        </div>
+
+        <div class="example-code">
+          <pre><code class="language-markup">&lt;div class=&quot;Tractile&quot;&gt;
+    &lt;div class=&quot;Tractile-slide&quot;&gt;[image1]&lt;/div&gt;
+    &lt;div class=&quot;Tractile-slide&quot;&gt;[image2]&lt;/div&gt;
+    &lt;div class=&quot;Tractile-slide&quot;&gt;[image3]&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+
+        <div class="example-code">
+          <pre><code class="language-javascript">Tractile($('.Tractile'), {
+  interval: 5000
+});</code></pre>
+        </div>
+
+        <div class="example-code">
+          <pre><code class="language-css">$Tractile-type: slideLeft
+$Tractile-duration: 1s
+$Tractile-transition: ease</code></pre>
+        </div>
+
+      </div>
+      <div class="example">
+
+        <h3>Sans jQuery</h3>
+
+        <div class="Tractile slideLeft">
+          <div class="Tractile-slide is-active">
+            <img src="http://farm9.staticflickr.com/8389/8680930869_439a88c939.jpg"/>
+          </div>
+          <div class="Tractile-slide">
+            <img src="http://farm9.staticflickr.com/8230/8599222990_c0663a6762.jpg"/>
+          </div>
+          <div class="Tractile-slide">
+            <img src="http://farm9.staticflickr.com/8238/8594949556_9a07d910f5.jpg"/>
+          </div>
+          <div class="Tractile-slide">
+            <img src="http://farm2.staticflickr.com/1174/1410122891_e9532767f2.jpg"/>
+          </div>
+        </div>
+
+      </div>
+      <div class="example">
+
+        <h3>Themeable</h3>
+
+        <div class="Tractile slideUp">
+          <div class="Tractile-slide is-active">
+            <img src="http://farm1.staticflickr.com/41/114424725_42d946fc01.jpg"/>
+          </div>
+          <div class="Tractile-slide">
+            <img src="http://farm5.staticflickr.com/4020/4382290032_f48da38b3d.jpg"/>
+          </div>
+          <div class="Tractile-slide">
+            <img src="http://farm3.staticflickr.com/2310/2168398358_2855cb718f.jpg"/>
+          </div>
+          <div class="Tractile-slide">
+            <img src="http://farm1.staticflickr.com/78/157688031_62d6db31f9.jpg"/>
+          </div>
+        </div>
+
+      </div>
     </div>
   </div>
 
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="js/prism.js"></script>
   <script src="js/tractile.js"></script>
   <script src="js/examples.js"></script>
+
+  <script>
+  function scrollDown() {
+    $('body').animate({
+      scrollTop: $('.non-splash').offset().top
+    }, 400);
+  }
+  $('.calldown').click(scrollDown);
+  </script>
 
 </body>
 

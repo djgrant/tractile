@@ -1,5 +1,5 @@
 Tractile($('.Tractile'), {
-  interval: 5000
+  interval: 4500
 });
 
 // Tractile(document.querySelectorAll('.Tractile'), {
