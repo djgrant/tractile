@@ -11,7 +11,7 @@ You need to pass the parent element into Tractile and it will use each child as 
 
 **Example HTML**
 
-    <div class="Tractile"> <!-- Pass this in! -->
+    <div class="Tractile">
         <div class="Tractile-slide">Hi</div>
         <div class="Tractile-slide">there</div>
         <div class="Tractile-slide">Sassy</div>
