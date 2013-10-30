@@ -4,23 +4,30 @@ Tractile is built, first and foremost, as a Sass plugin. However as much awesome
 
 Tractile works with or without jQuery, to make it as easy as possible for you to integrate.
 
+
+### Quick start
+
 You need to pass the parent element into Tractile and it will use each child as a slide. Simple. 
 
-ie. the following HTML illustrates what you need to do
+**Example HTML**
 
-    <ul class="Tractile"> <!-- Pass this in! -->
-        <li class="Tractile-slide">Hi</li>
-        <li class="Tractile-slide">there</li>
-        <li class="Tractile-slide">Sassy</li>
-    </ul>
+    <div class="Tractile"> <!-- Pass this in! -->
+        <div class="Tractile-slide">Hi</div>
+        <div class="Tractile-slide">there</div>
+        <div class="Tractile-slide">Sassy</div>
+    </div>
 
-So we can use jQuery:
+**Example jQuery**
 
     Tractile($('.Tractile'), {
       interval: 5000
     });
   
-Or pass it multiple elements with `document.querySelectorAll` which will instantiate multiple Tractile sliders.
+  
+  
+### More examples
+
+Alternatively you can pass in multiple elements with `document.querySelectorAll` which will instantiate multiple Tractile sliders.
   
     Tractile(document.querySelectorAll('.Tractile'), {
       interval: 5000
