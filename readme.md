@@ -9,9 +9,9 @@ You need to pass the parent element into Tractile and it will use each child as 
 ie. the following HTML illustrates what you need to do
 
     <ul class="Tractile"> <!-- Pass this in! -->
-        <li>Hi</li>
-        <li>there</li>
-        <li>Sassy</li>
+        <li class="Tractile-slide">Hi</li>
+        <li class="Tractile-slide">there</li>
+        <li class="Tractile-slide">Sassy</li>
     </ul>
 
 So we can use jQuery:
