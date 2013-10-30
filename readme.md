@@ -1,5 +1,5 @@
 ## Tractile
-### The super minimal Sass slider
+### The responsive Sass slider
 
 [Demo page](http://djgrant.github.io/tractile/)
 
