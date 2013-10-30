@@ -1,4 +1,7 @@
-## JavaScript
+## Tractile
+### The super minimal Sass slider
+
+[Demo page](http://djgrant.github.io/tractile/)
 
 Tractile is built, first and foremost, as a Sass plugin. However as much awesome as Sass posesses, we still need a small bit of JavaScript to kick it off.
 
