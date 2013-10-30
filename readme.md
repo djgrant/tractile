@@ -46,6 +46,6 @@ Tractile is structured as a Sass plugin with a `config` partial for you to pass 
 
 **JavaScript**
 
-Tractile is built, first and foremost, as a Sass plugin. However as much awesome as Sass posesses, we still need a small bit of JavaScript to keep the slider ticking over by applying state classes to the slides.
+Tractile is built, first and foremost, as a Sass plugin using CSS3 animation. However, we still need a small bit of JavaScript to keep the slider ticking over by applying state classes to the slides.
 
 Tractile works with or without jQuery, to make it as easy as possible for you to integrate.
