@@ -6,8 +6,6 @@
 
 ### Quick start
 
-You need to pass the parent element into Tractile and it will use each child as a slide. Simple. 
-
 **Example HTML**
 
     <div class="Tractile">
