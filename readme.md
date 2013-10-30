@@ -1,5 +1,5 @@
 ## Tractile
-### The responsive Sass slider
+### A Sass powered responsive slider
 
 [Demo page](http://djgrant.github.io/tractile/)
 
