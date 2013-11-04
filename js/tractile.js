@@ -46,8 +46,6 @@
       previous: 'is-previous'
     };
 
-    // this.elements[0].classList.add(this.klasses.active);
-
     setInterval(this.run.bind(this), this.options.interval);
 
   }
