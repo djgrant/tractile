@@ -24,7 +24,7 @@
         <div class="download">
           <a class="Button" href="https://github.com/djgrant/tractile">Github</a>
           <a class="Button" href="https://github.com/djgrant/tractile/archive/gh-pages.zip">Download Zip</a>
-          <a class="Button" href="https://twitter.com/intent/tweet?text=Tractile - A Sass generated CSS3 responsive slider">Tweet &rarr;</a>
+          <a class="Button" href="https://twitter.com/intent/tweet?text=Tractile - A Sass generated CSS3 responsive slider&url=http://djgrant.github.io/tractile">Tweet &rarr;</a>
         </div>
       </div>
     </div>
@@ -43,6 +43,11 @@
       <div class="Tractile-slide">
         <div class="strapline">
           <h2>Style agnostic</h2>
+        </div>
+      </div>
+      <div class="Tractile-slide">
+        <div class="strapline">
+          <h2>Seamlessly infinite</h2>
         </div>
       </div>
     </div>
@@ -116,6 +121,12 @@ $Tractile-transition: ease</code></pre>
           </div>
         </div>
 
+        <div class="example-code">
+          <pre><code class="language-javascript">Tractile(document.querySelectorAll('.Tractile'), {
+  interval: 5000
+});</code></pre>
+        </div>
+
       </div>
       <div class="example">
 
@@ -134,6 +145,10 @@ $Tractile-transition: ease</code></pre>
           <div class="Tractile-slide">
             <img src="http://farm1.staticflickr.com/78/157688031_62d6db31f9.jpg"/>
           </div>
+        </div>
+
+        <div class="example-code">
+          <pre><code class="language-javascript">Tractile(document.querySelector('.Tractile'));</code></pre>
         </div>
 
       </div>
