@@ -52,30 +52,48 @@
 
   Tractile.prototype.run = function() {
 
+    var addClass = function(classname, element) {
+      var cn = element.className;
+      if (cn.indexOf(classname) != -1) {
+        return;
+      }
+      if (cn !== '') {
+        classname = ' ' + classname;
+      }
+      element.className = cn + classname;
+    };
+
+    var removeClass = function(classname, element) {
+      var cn = element.className;
+      var rxp = new RegExp("\\s?\\b" + classname + "\\b", "g");
+      cn = cn.replace(rxp, '');
+      element.className = cn;
+    };
+
     var clear = function(klass) {
       if (!klass) {
         return;
       }
       var len = this.total;
       while (len--) {
-        this.elements[len].classList.remove(klass);
+        removeClass(klass, this.elements[len]);
       }
     }.bind(this);
 
     if ((this.current - 1) >= 0) {
-      this.elements[this.current - 1].classList.remove(this.klasses.previous);
+      removeClass(this.klasses.previous, this.elements[this.current - 1]);
     }
     if ((this.current + 1) < this.total) {
       clear(this.klasses.previous);
-      this.elements[this.current].classList.remove(this.klasses.active);
-      this.elements[this.current].classList.add(this.klasses.previous);
-      this.elements[this.current + 1].classList.add(this.klasses.active);
+      removeClass(this.klasses.active, this.elements[this.current]);
+      addClass(this.klasses.previous, this.elements[this.current]);
+      addClass(this.klasses.active, this.elements[this.current + 1]);
       this.current++;
     } else {
       this.current = 0;
       clear(this.klasses.active);
-      this.elements[this.total - 1].classList.add(this.klasses.previous);
-      this.elements[this.current].classList.add(this.klasses.active);
+      addClass(this.klasses.previous, this.elements[this.total - 1]);
+      addClass(this.klasses.active, this.elements[this.current]);
     }
 
   };
