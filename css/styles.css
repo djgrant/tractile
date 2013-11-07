@@ -240,14 +240,33 @@ body {
     font-size: 40px;
   }
 }
-.example {
+.example,
+.browsers {
   width: 100%;
   padding: 20px 0 60px;
 }
-.example h3 {
+.example h3,
+.browsers h3 {
   color: #f1f1f1;
   text-align: center;
   margin-bottom: 50px;
+}
+
+.browsers p {
+  margin: -40px 0 50px 0;
+}
+.browsers p, .browsers a {
+  color: #dddddd;
+}
+
+.browsers-logos {
+  padding: 15px 20px;
+  text-align: center;
+  background: white;
+  border-radius: 3px;
+}
+.browsers-logos img {
+  margin: 0 5px;
 }
 
 h1 {
@@ -274,6 +293,9 @@ h2, h3 {
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 300;
   text-align: center;
+}
+
+h2, h3, p {
   -webkit-font-smoothing: antialiased;
 }
 
