@@ -1,5 +1,5 @@
 ## Tractile
-### A Sass generated responsive slider
+### A Sass generated CSS3 slider
 
 Tractile is a powerful Sass plugin that produces lightweight custom CSS keeping your projects bloat free!
 
