@@ -2,6 +2,8 @@
 @import tractile-plugin
 @import tractile-skin
 
+@import ../test
+
 
 // Example Styles
 // ==============
@@ -28,8 +30,8 @@ body
     padding: 0 15px
 
 .non-splash
-  background: #313131
   padding-top: 40px
+  background: #313131
 
 @media (screen and min-width: 770px)
   .splash
@@ -39,20 +41,25 @@ body
     width: 100%
     height: 98vh
 
-    .header,
-    .Tractile
+    &:before
+      content: ''
       position: absolute
-
-    .header
-      z-index: 2
-
-    .Tractile
+      top: 90px
       z-index: 1
+      width: 100%
+      border-bottom: 1px solid #eee
 
   .non-splash
     z-index: 2
     min-height: 100vh
     margin-top: 98vh
+
+  .header
+    position: fixed
+    top: 0
+    z-index: 3
+    width: 100%
+
 
 .wrapper
   max-width: 1200px
@@ -64,27 +71,27 @@ body
   padding: 10px
 
 .header
-  position: fixed
-  top: 0
-  width: 100%
-  height: 60px
-  line-height: 60px
-  border-bottom: 1px solid #eee
+  background: white
 
 .logo
   font-size: 45px
   text-align: center
 
 @media (screen and max-width: 769px)
-  .download
+
+  .splash
     display: none
-    position: absolute
-    left: 0
-    right: 0
+
+  .links
     height: 60px
     line-height: 60px
     text-align: center
-    border-bottom: 1px solid #eee
+    background: white
+    border-top: 1px solid #eee
+
+@media (screen and max-width: 400px)
+  .links-download
+    display: none
 
 .calldown
   display: none
@@ -110,7 +117,7 @@ body
     padding-right: 50px
     font-size: 56px
 
-  .download
+  .links
     float: right
 
   .calldown

@@ -97,6 +97,10 @@
 }
 
 * {
+  display: none !important;
+}
+
+* {
   position: relative;
   margin: 0;
   padding: 0;
@@ -120,8 +124,8 @@ body {
 }
 
 .non-splash {
-  background: #313131;
   padding-top: 40px;
+  background: #313131;
 }
 
 @media (min-width: 770px) {
@@ -132,21 +136,26 @@ body {
     width: 100%;
     height: 98vh;
   }
-  .splash .header,
-  .splash .Tractile {
+  .splash:before {
+    content: "";
     position: absolute;
-  }
-  .splash .header {
-    z-index: 2;
-  }
-  .splash .Tractile {
+    top: 90px;
     z-index: 1;
+    width: 100%;
+    border-bottom: 1px solid #eeeeee;
   }
 
   .non-splash {
     z-index: 2;
     min-height: 100vh;
     margin-top: 98vh;
+  }
+
+  .header {
+    position: fixed;
+    top: 0;
+    z-index: 3;
+    width: 100%;
   }
 }
 .wrapper {
@@ -161,12 +170,7 @@ body {
 }
 
 .header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  height: 60px;
-  line-height: 60px;
-  border-bottom: 1px solid #eeeeee;
+  background: white;
 }
 
 .logo {
@@ -175,15 +179,21 @@ body {
 }
 
 @media (max-width: 769px) {
-  .download {
+  .splash {
     display: none;
-    position: absolute;
-    left: 0;
-    right: 0;
+  }
+
+  .links {
     height: 60px;
     line-height: 60px;
     text-align: center;
-    border-bottom: 1px solid #eeeeee;
+    background: white;
+    border-top: 1px solid #eeeeee;
+  }
+}
+@media (max-width: 400px) {
+  .links-download {
+    display: none;
   }
 }
 .calldown {
@@ -214,7 +224,7 @@ body {
     font-size: 56px;
   }
 
-  .download {
+  .links {
     float: right;
   }
 
