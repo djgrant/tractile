@@ -65,7 +65,7 @@
 
         <h3>Simple setup</h3>
 
-        <div class="Tractile slideLeft">
+        <div class="Tractile fade">
           <div class="Tractile-slide is-active">
             <img src="http://farm9.staticflickr.com/8389/8680930869_439a88c939.jpg"/>
           </div>
@@ -95,7 +95,7 @@
         </div>
 
         <div class="example-code">
-          <pre><code class="language-css">$Tractile-type: slideLeft
+          <pre><code class="language-css">$Tractile-type: fade
 $Tractile-duration: 1s
 $Tractile-transition: ease</code></pre>
         </div>
@@ -105,7 +105,7 @@ $Tractile-transition: ease</code></pre>
 
         <h3>Sans jQuery</h3>
 
-        <div class="Tractile fade">
+        <div class="Tractile slideLeft">
           <div class="Tractile-slide is-active">
             <img src="http://farm4.staticflickr.com/3793/10034749186_60a5abbfc1.jpg"/>
           </div>
@@ -127,6 +127,12 @@ $Tractile-transition: ease</code></pre>
           <pre><code class="language-javascript">Tractile(document.querySelectorAll('.Tractile'), {
   interval: 5000
 });</code></pre>
+        </div>
+
+        <div class="example-code">
+          <pre><code class="language-css">$Tractile-type: slideLeft
+$Tractile-duration: 1s
+$Tractile-transition: ease</code></pre>
         </div>
 
       </div>
@@ -151,6 +157,10 @@ $Tractile-transition: ease</code></pre>
 
         <div class="example-code">
           <pre><code class="language-javascript">Tractile(document.querySelector('.Tractile'));</code></pre>
+        </div>
+
+        <div class="example-code">
+          <pre><code class="language-css">.Tractile--custom { border: 5px solid #fff; }</code></pre>
         </div>
 
       </div>
