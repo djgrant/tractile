@@ -134,8 +134,13 @@ body
       font-size: 40px
 
 
+.non-splash
+  p, a, span
+    color: #ddd
+
 .example,
-.browsers
+.browsers,
+.authors
   width: 100%
   padding: 20px 0 60px
 
@@ -144,22 +149,47 @@ body
     text-align: center
     margin-bottom: 50px
 
+
 .browsers
   p
     margin: -40px 0 50px 0
-
-  p, a
-    color: #ddd
 
 
 .browsers-logos
   padding: 15px 20px
   text-align: center
-  background: white
+  background: #222
   border-radius: 3px
 
   img
     margin: 0 5px
+
+
+.authors
+  text-align: center
+
+  &:after
+    display: table
+    content: ''
+    clear: both
+
+.author
+  display: inline-block
+  margin: 0 30px
+
+  img
+    max-width: 150px
+    border-radius: 100px
+    -webkit-filter: sepia(50%)
+
+  p
+    margin: 15px 0 30px 0
+
+  a
+    text-decoration: none
+
+.author--dan p
+  left: -3px
 
 
 h1

@@ -240,13 +240,19 @@ body {
     font-size: 40px;
   }
 }
+.non-splash p, .non-splash a, .non-splash span {
+  color: #dddddd;
+}
+
 .example,
-.browsers {
+.browsers,
+.authors {
   width: 100%;
   padding: 20px 0 60px;
 }
 .example h3,
-.browsers h3 {
+.browsers h3,
+.authors h3 {
   color: #f1f1f1;
   text-align: center;
   margin-bottom: 50px;
@@ -255,18 +261,44 @@ body {
 .browsers p {
   margin: -40px 0 50px 0;
 }
-.browsers p, .browsers a {
-  color: #dddddd;
-}
 
 .browsers-logos {
   padding: 15px 20px;
   text-align: center;
-  background: white;
+  background: #222222;
   border-radius: 3px;
 }
 .browsers-logos img {
   margin: 0 5px;
+}
+
+.authors {
+  text-align: center;
+}
+.authors:after {
+  display: table;
+  content: "";
+  clear: both;
+}
+
+.author {
+  display: inline-block;
+  margin: 0 30px;
+}
+.author img {
+  max-width: 150px;
+  border-radius: 100px;
+  -webkit-filter: sepia(50%);
+}
+.author p {
+  margin: 15px 0 30px 0;
+}
+.author a {
+  text-decoration: none;
+}
+
+.author--dan p {
+  left: -3px;
 }
 
 h1 {
