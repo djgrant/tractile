@@ -96,6 +96,26 @@
   color: #777777;
 }
 
+a.Button {
+  line-height: 38px;
+  text-decoration: none;
+  color: #333333;
+  font-size: 14px;
+  font-weight: 600;
+  -webkit-font-smoothing: antialiased;
+}
+
+.Button {
+  display: inline-block;
+  height: 40px;
+  padding: 0 15px;
+  border: 1px solid #dddddd;
+  border-radius: 4px;
+}
+.Button:active {
+  background: #f1f1f1;
+}
+
 * {
   position: relative;
   margin: 0;
@@ -177,6 +197,10 @@ body {
 @media (max-width: 769px) {
   .splash {
     display: none;
+  }
+
+  .header .wrapper {
+    padding: 0;
   }
 
   .links {
@@ -336,26 +360,6 @@ h2, h3 {
 
 h2, h3, p {
   -webkit-font-smoothing: antialiased;
-}
-
-a.Button {
-  line-height: 38px;
-  text-decoration: none;
-  color: #333333;
-  font-size: 14px;
-  font-weight: 600;
-  -webkit-font-smoothing: antialiased;
-}
-
-.Button {
-  display: inline-block;
-  height: 40px;
-  padding: 0 15px;
-  border: 1px solid #dddddd;
-  border-radius: 4px;
-}
-.Button:active {
-  background: #f1f1f1;
 }
 
 /**
