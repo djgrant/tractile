@@ -316,13 +316,16 @@ body {
   display: inline-block;
   margin: 0 30px;
 }
+.author:first-of-type {
+  margin-bottom: 40px;
+}
 .author img {
   max-width: 150px;
   border-radius: 100px;
   -webkit-filter: sepia(50%);
 }
 .author p {
-  margin: 15px 0 30px 0;
+  margin-top: 20px;
 }
 .author a {
   text-decoration: none;
