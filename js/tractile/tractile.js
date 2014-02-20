@@ -13,10 +13,6 @@
       }
     }
 
-    if (this === window) {
-      return;
-    }
-
     node = (node instanceof jQuery) ? node[0] : node;
 
     if (!node.children || node.children.length < 2) {
