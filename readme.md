@@ -96,7 +96,7 @@ If you're new to Sass head over to the [http://sass-lang.com/install](Sass insta
 Tractile does not include any vendor prefixes in source. Possible ways to add vendor prefixes include:
 
  * prefixfree.js (included in package)
- * [https://github.com/ai/autoprefixer](Auto Prefixer)
+ * [Auto Prefixer](https://github.com/ai/autoprefixer)
  
  
 ### Authors
