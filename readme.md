@@ -47,7 +47,7 @@ $Tractile-transition: ease
 
     `<div class="Tractile slideLeft"></div>`
 
-    When using `all`, if you don't include an animtion class, fade will be used.
+    When using `all`, if you don't include an animation class, fade will be used.
 
 
  * **$Tractile-duration**: `X.Ys, Zms`
@@ -84,7 +84,7 @@ Or, we can just pass one element in, and use the default slide interval of 2 sec
     Tractile(document.querySelector('.Tractile'));
     
     
-### Dependancies
+### Dependencies
 
 Sass is used to generate the plugin CSS.
 
