@@ -2,49 +2,49 @@
 
   function Tractile(node, options) {
 
-    // doing this allows the developer to omit the `new` keyword from their calls to Tractile
     if (!(this instanceof Tractile)) {
       if (node.length) {
         Array.prototype.forEach.call(node, function(n) {
-          return new Tractile(n, options);
+          new Tractile(n, options);
         });
       } else {
-        return new Tractile(node, options);
+        new Tractile(n, options);
       }
+    } else {
+
+      this.klasses = {
+        active: 'is-active',
+        previous: 'is-previous'
+      };
+
+      var userOptions = options || {};
+
+      var defaults = {
+        interval: 2000
+      };
+
+      this.options = {};
+
+      for (var x in defaults) {
+        this.options[x] = userOptions[x] || defaults[x];
+      }
+
+      node = (node instanceof jQuery) ? node[0] : node;
+
+      if (!node.children || node.children.length < 2) {
+        return;
+      }
+
+      this.current = 0;
+
+      this.elements = node.children;
+
+      this.total = this.elements.length;
+
+      setInterval(this.run.bind(this), this.options.interval);
     }
-
-    node = (node instanceof jQuery) ? node[0] : node;
-
-    if (!node.children || node.children.length < 2) {
-      return;
-    }
-
-    var userOptions = options || {};
-
-    var defaults = {
-      interval: 2000
-    };
-
-    this.options = {};
-
-    for (var x in defaults) {
-      this.options[x] = userOptions[x] || defaults[x];
-    }
-
-    this.current = 0;
-
-    this.elements = node.children;
-
-    this.total = this.elements.length;
-
-    this.klasses = {
-      active: 'is-active',
-      previous: 'is-previous'
-    };
-
-    setInterval(this.run.bind(this), this.options.interval);
-
-  }
+    
+  };
 
   Tractile.prototype.run = function() {
 
@@ -94,7 +94,6 @@
 
   };
 
-  // expose Tractile
   window.Tractile = Tractile;
 
 })();
