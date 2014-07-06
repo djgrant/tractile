@@ -1,11 +1,11 @@
 $_animationClass: ""
 
-.Tractile
+.tractile
   position: relative
   overflow: hidden
   perspective: 1000
 
-.Tractile-slide
+.tractile-slide
   position: absolute
   width: 100%
   height: 100%
@@ -16,28 +16,28 @@ $_animationClass: ""
   &.is-previous
     z-index: 1
 
-  @if $Tractile-type == all
+  @if $tractile-type == all
     .slideLeft &,
     .slideUp &
-      transition: transform $Tractile-duration $Tractile-transition
+      transition: transform $tractile-duration $tractile-transition
 
     .fade &
-      transition: opacity $Tractile-duration $Tractile-transition
+      transition: opacity $tractile-duration $tractile-transition
 
   @else
     &
-      @if $Tractile-type == fade
-        transition: opacity $Tractile-duration $Tractile-transition
+      @if $tractile-type == fade
+        transition: opacity $tractile-duration $tractile-transition
 
       @else
-        transition: transform $Tractile-duration $Tractile-transition
+        transition: transform $tractile-duration $tractile-transition
 
 
-@if $Tractile-type == all
+@if $tractile-type == all
   $_animationClass: ".slideLeft"
 
-@if $Tractile-type == slideLeft or $Tractile-type == all
-  #{$_animationClass} .Tractile-slide
+@if $tractile-type == slideLeft or $tractile-type == all
+  #{$_animationClass} .tractile-slide
 
     // Queuing
     transform: translateX(100%) translateZ(0)
@@ -51,11 +51,11 @@ $_animationClass: ""
       transform: translateX(-100%)
 
 
-@if $Tractile-type == all
+@if $tractile-type == all
   $_animationClass: ".slideRight"
 
-@if $Tractile-type == slideRight or $Tractile-type == all
-  #{$_animationClass} .Tractile-slide
+@if $tractile-type == slideRight or $tractile-type == all
+  #{$_animationClass} .tractile-slide
 
     // Queing
     transform: translateX(-100%) translateZ(0)
@@ -69,11 +69,11 @@ $_animationClass: ""
       transform: translateX(100%)
 
 
-@if $Tractile-type == all
+@if $tractile-type == all
   $_animationClass: ".slideUp"
 
-@if $Tractile-type == slideUp or $Tractile-type == all
-  #{$_animationClass} .Tractile-slide
+@if $tractile-type == slideUp or $tractile-type == all
+  #{$_animationClass} .tractile-slide
 
     transform: translateY(100%) translateZ(0)
 
@@ -84,11 +84,11 @@ $_animationClass: ""
       transform: translateY(-100%)
 
 
-@if $Tractile-type == all
+@if $tractile-type == all
   $_animationClass: ".slideDown"
 
-@if $Tractile-type == slideUp or $Tractile-type == all
-  #{$_animationClass} .Tractile-slide
+@if $tractile-type == slideUp or $tractile-type == all
+  #{$_animationClass} .tractile-slide
 
     transform: translateY(-100%) translateZ(0)
 
@@ -99,11 +99,11 @@ $_animationClass: ""
       transform: translateY(100%)
 
 
-@if $Tractile-type == all
+@if $tractile-type == all
   $_animationClass: ".fade"
 
-@if $Tractile-type == fade or $Tractile-type == all
-  #{$_animationClass} .Tractile-slide
+@if $tractile-type == fade or $tractile-type == all
+  #{$_animationClass} .tractile-slide
 
     opacity: 0
 

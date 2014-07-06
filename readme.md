@@ -3,58 +3,62 @@
 
 Tractile is a powerful Sass plugin that produces lightweight custom CSS keeping your projects bloat free!
 
-[Go to the project page →](http://danielgrant.im/tractile/)
+[Go to the project page â†’](http://danielgrant.im/tractile/)
 
 
-### Quick start
+### Quick starts
+
+
+---
+
 
 **HTML**
 
-    <div class="Tractile">
-        <div class="Tractile-slide">[img1]</div>
-        <div class="Tractile-slide">[img2]</div>
-        <div class="Tractile-slide">[img3]</div>
+    <div class="tractile">
+        <div class="tractile-slide">[img1]</div>
+        <div class="tractile-slide">[img2]</div>
+        <div class="tractile-slide">[img3]</div>
     </div>
     
 **Sass** 
 
-*Tractile-config.sass*
+*tractile-config.sass*
 ```
-$Tractile-type: fade
-$Tractile-duration: 0.5s
-$Tractile-transition: ease
+$tractile-type: fade
+$tractile-duration: 0.5s
+$tractile-transition: ease
 ```
 
-*Tractile-theme.sass*
+*tractile-theme.sass*
 ```
-.Tractile
+.tractile
   width: 500px
   border: 3px solid pink
 ```
 
 **jQuery**
 
-    Tractile($('.Tractile'), {
+    Tractile($('.tractile'), {
       interval: 5000
     });
   
   
 ### Config options
 
- * **$Tractile-type**: `none, all, fade, slideLeft, slideRight, slideUp, slideDown`
+ * **$tractile-type**: `none, all, fade, slideLeft, slideRight, slideUp, slideDown`
 
     Use the `all` option when you have multiple sliders that require different animations. Simply add a class with the name of the desired transition to each slider: 
 
-    `<div class="Tractile slideLeft"></div>`
+    `<div class="tractile slideLeft"></div>`
 
     When using `all`, if you don't include an animation class, fade will be used.
 
 
- * **$Tractile-duration**: `X.Ys, Zms`
+ * **$tractile-duration**: `X.Ys, Zms`
 
     Specifies the duration of the transition.
 
- * **$Tractile-transition**: `ease, ease-in, ease-in-out, linear, etc.`
+ * **$tractile-transition**: `ease, ease-in, ease-in-out, linear, etc.`
 
     Specifies the transition timing function to be used.
 
@@ -67,21 +71,21 @@ Although Tractile is a Sass plugin we still need a small bit of JavaScript to ke
 
 
 ```
-Tractile($('.Tractile'), {
+Tractile($('.tractile'), {
   interval: 5000
 });
 ```
 
 Tractile also works without jQuery. Instantiating multiple Tractile sliders:
   
-    Tractile(document.querySelectorAll('.Tractile'), {
+    Tractile(document.querySelectorAll('.tractile'), {
       interval: 5000
     });
   
 
 Or, we can just pass one element in, and use the default slide interval of 2 seconds.
 
-    Tractile(document.querySelector('.Tractile'));
+    Tractile(document.querySelector('.tractile'));
     
     
 ### Dependencies

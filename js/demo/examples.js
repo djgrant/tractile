@@ -1,9 +1,9 @@
-Tractile($('.Tractile'), {
+Tractile($('.tractile'), {
   interval: 4000
 });
 
-// Tractile(document.querySelectorAll('.Tractile'), {
+// Tractile(document.querySelectorAll('.tractile'), {
 //   interval: 5000
 // });
 
-// Tractile(document.querySelector('.Tractile'));
+// Tractile(document.querySelector('.tractile'));
