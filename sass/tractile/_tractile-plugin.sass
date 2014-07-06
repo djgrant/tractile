@@ -112,3 +112,56 @@ $_animationClass: ""
 
     &.is-previous
       opacity: 0
+
+
+@if $tractile-progress
+
+  .tractile-progress
+    z-index: 2
+    position: absolute
+    width: 100%
+    bottom: 20px
+
+  ul
+    margin: 0
+    text-align: center
+
+  li
+    display: inline-block
+    width: 10px
+    height: 10px
+    margin: 0 0 0 10px
+    cursor: pointer
+
+    &:first-child
+      margin: 0
+
+    background: transparent
+    border: 1px solid #ccc
+    border-radius: 5px
+    transition: all 0 0.1s
+
+    &.is-active
+      background: black
+      border-color: transparent
+
+
+@if $tractile-progress-vertical
+
+  .tractile-progress--vertical
+    display: table
+    top: 0
+    right: 20px
+    width: auto
+    height: 100%
+
+    ul
+      display: table-cell
+      vertical-align: middle
+
+    li
+      display: block
+      margin: 10px 0 0 0
+
+      &:first-child
+        margin: 0

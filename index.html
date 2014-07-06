@@ -31,26 +31,30 @@
 
   <div class="splash">
 
-    <div class="tractile tractile--fullscreen slideLeft">
-      <div class="tractile-slide is-active">
-        <div class="strapline">
-          <h2>Sass generated CSS3 slider</h2>
+    <div class="tractile-wrapper">
+      <div class="tractile tractile--fullscreen slideLeft">
+        <div class="tractile-slide is-active">
+          <div class="strapline">
+            <h2>Sass generated CSS3 slider</h2>
+          </div>
+        </div>
+        <div class="tractile-slide">
+          <div class="strapline">
+            <h2>Minimal JavaScript, lightweight CSS</h2>
+          </div>
+        </div>
+        <div class="tractile-slide">
+          <div class="strapline">
+            <h2>Style agnostic</h2>
+          </div>
+        </div>
+        <div class="tractile-slide">
+          <div class="strapline">
+            <h2>Seamlessly infinite</h2>
+          </div>
         </div>
       </div>
-      <div class="tractile-slide">
-        <div class="strapline">
-          <h2>Minimal JavaScript, lightweight CSS</h2>
-        </div>
-      </div>
-      <div class="tractile-slide">
-        <div class="strapline">
-          <h2>Style agnostic</h2>
-        </div>
-      </div>
-      <div class="tractile-slide">
-        <div class="strapline">
-          <h2>Seamlessly infinite</h2>
-        </div>
+      <div class="tractile-progress tractile-progress--vertical">
       </div>
     </div>
 
@@ -65,18 +69,22 @@
 
         <h3>Simple setup</h3>
 
-        <div class="tractile fade">
-          <div class="tractile-slide is-active">
-            <img src="http://farm9.staticflickr.com/8389/8680930869_439a88c939.jpg"/>
+        <div class="tractile-wrapper">
+          <div id="carousel" class="tractile fade">
+            <div class="tractile-slide is-active">
+              <img src="http://farm9.staticflickr.com/8389/8680930869_439a88c939.jpg"/>
+            </div>
+            <div class="tractile-slide">
+              <img src="http://farm9.staticflickr.com/8230/8599222990_c0663a6762.jpg"/>
+            </div>
+            <div class="tractile-slide">
+              <img src="http://farm9.staticflickr.com/8238/8594949556_9a07d910f5.jpg"/>
+            </div>
+            <div class="tractile-slide">
+              <img src="http://farm2.staticflickr.com/1174/1410122891_e9532767f2.jpg"/>
+            </div>
           </div>
-          <div class="tractile-slide">
-            <img src="http://farm9.staticflickr.com/8230/8599222990_c0663a6762.jpg"/>
-          </div>
-          <div class="tractile-slide">
-            <img src="http://farm9.staticflickr.com/8238/8594949556_9a07d910f5.jpg"/>
-          </div>
-          <div class="tractile-slide">
-            <img src="http://farm2.staticflickr.com/1174/1410122891_e9532767f2.jpg"/>
+          <div id="carousel-progress" class="tractile-progress">
           </div>
         </div>
 
