@@ -3,7 +3,7 @@
 
 Tractile is a powerful Sass plugin that produces lightweight custom CSS keeping your projects bloat free!
 
-[Go to the project page â†’](http://danielgrant.im/tractile/)
+[Go to the project page](http://danielgrant.co/tractile/)
 
 
 ### Quick starts
